@@ -93,7 +93,7 @@ Ext.define('MyApp.view.Root', {
                 id: 'ContentView1',
                 layout: {
                     type: 'card',
-					animation:'slide'
+		    animation:'slide'
                 },
                 items: [
                     {
