@@ -1,0 +1,356 @@
+{
+    "type": "container",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Root",
+        "designer|initialView": true,
+        "id": "Root",
+        "layout": "card"
+    },
+    "id": "ExtBox1-ext-gen20493",
+    "designerId": "e8d5a6f8-138d-489a-9c99-a6288a1d7d47",
+    "cn": [
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Menu",
+                "designer|displayName": "Menu",
+                "id": "Menu"
+            },
+            "designerId": "cf413f7a-56cf-4fbd-9556-5ded35061696",
+            "cn": [
+                {
+                    "type": "titlebar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyTitleBar2",
+                        "docked": "top",
+                        "title": "차 례"
+                    },
+                    "designerId": "a57a4850-3b86-4cc6-9669-67b49614adf4"
+                },
+                {
+                    "type": "button",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyButton4",
+                        "designer|displayName": "button_Chapter1",
+                        "itemId": "button_Chapter1",
+                        "ui": "round",
+                        "text": "Chapter1"
+                    },
+                    "designerId": "59f20611-6909-48d9-84f1-1513f4de8e03",
+                    "cn": [
+                        {
+                            "type": "basiceventbinding",
+                            "reference": {
+                                "name": "listeners",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "onButton_Chapter1Tap",
+                                "fn": "onButton_Chapter1Tap",
+                                "implHandler": [
+                                    "Ext.getCmp('Root').setActiveItem(1);"
+                                ],
+                                "name": "tap"
+                            },
+                            "designerId": "3eea5a14-e4fa-4f50-b3fb-6b24a36fe3b2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "panel",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|userClassName": "Chapter1",
+                "designer|userAlias": null,
+                "html": null,
+                "id": "ContentView1",
+                "itemId": null,
+                "layout": "card"
+            },
+            "designerId": "d0ded1d2-e8d2-4f4e-a503-103e13d719e2",
+            "cn": [
+                {
+                    "type": "toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyToolbar1",
+                        "designer|displayName": "Toolbar",
+                        "docked": "bottom",
+                        "defaults": [
+                            "{\r",
+                            "    iconMask: true,\r",
+                            "    ui: 'plain'\r",
+                            "}"
+                        ]
+                    },
+                    "designerId": "4ec7124f-b844-4d6e-9bf7-a03130b43a00",
+                    "cn": [
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton1",
+                                "designer|displayName": "이전",
+                                "border": null,
+                                "itemId": "Toolbar_Pre",
+                                "iconCls": "arrow_left",
+                                "iconMask": true,
+                                "text": "이전으로"
+                            },
+                            "designerId": "f6933884-b6a1-466f-8edd-c0c5db5e1bf6",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onToolbar_PreTap",
+                                        "fn": "onToolbar_PreTap",
+                                        "implHandler": [
+                                            "var rootPanel = Ext.getCmp('ContentView1');//card속성을 가진 RootPanel\r",
+                                            "var num_currentView = eval(rootPanel._activeItem.id.slice(4,5) - 1);//현재뷰에서 한칸 위로\r",
+                                            "\r",
+                                            "\r",
+                                            "if( num_currentView < 0 ){\r",
+                                            "    alert( \"홈으로 : \");\r",
+                                            "\r",
+                                            "    num_currentView = 0;//초기화\r",
+                                            "    rootPanel.setActiveItem( Ext.getCmp('page' + num_currentView ) );\r",
+                                            "}\r",
+                                            "else{\r",
+                                            "    alert(\"이전으로\");\r",
+                                            "\r",
+                                            "    rootPanel.setActiveItem( Ext.getCmp('page' + num_currentView ) );\r",
+                                            "}\r",
+                                            ""
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "c6c91466-b220-4261-98f8-ffd1d96357d8"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton2",
+                                "designer|displayName": "메인",
+                                "itemId": "Toolbar_Home",
+                                "iconAlign": "center",
+                                "iconCls": "home",
+                                "iconMask": true,
+                                "text": null
+                            },
+                            "designerId": "94bfc311-a3b3-4004-84cf-513e13dac84c",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onToolbar_HomeTap",
+                                        "fn": "onToolbar_HomeTap",
+                                        "implHandler": [
+                                            "Ext.getCmp('Root').setActiveItem(0);"
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "63a68170-01cb-473d-883f-c4e5dcecb975"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton3",
+                                "designer|displayName": "다시",
+                                "itemId": "Toolbar_Refresh",
+                                "iconAlign": "center",
+                                "iconCls": "refresh",
+                                "iconMask": true,
+                                "text": null
+                            },
+                            "designerId": "f55314c5-53e7-43f0-b315-c176c18ad63a"
+                        },
+                        {
+                            "type": "button",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyButton4",
+                                "designer|displayName": "다음",
+                                "itemId": "Toolbar_Next",
+                                "iconAlign": "right",
+                                "iconCls": "arrow_right",
+                                "iconMask": true,
+                                "text": "다음으로"
+                            },
+                            "designerId": "00081cd2-b9a7-48eb-a23d-197c9c31c268",
+                            "cn": [
+                                {
+                                    "type": "basiceventbinding",
+                                    "reference": {
+                                        "name": "listeners",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "onToolbar_NextTap",
+                                        "fn": "onToolbar_NextTap",
+                                        "implHandler": [
+                                            "var rootPanel = Ext.getCmp('ContentView1');//card속성을 가진 RootPanel\r",
+                                            "var num_currentView = eval(rootPanel._activeItem.id.slice(4,5) + 1);//현재뷰에서 한칸 위로\r",
+                                            "\r",
+                                            "\r",
+                                            "if( num_currentView >= rootPanel.innerItems.length ){\r",
+                                            "    alert( \"홈으로 : \");\r",
+                                            "\r",
+                                            "    num_currentView = 0;//초기화\r",
+                                            "    rootPanel.setActiveItem( Ext.getCmp('page' + num_currentView ) );\r",
+                                            "}\r",
+                                            "else{\r",
+                                            "    alert(\"다음으로\");\r",
+                                            "\r",
+                                            "    rootPanel.setActiveItem( Ext.getCmp('page' + num_currentView ) );\r",
+                                            "}\r",
+                                            ""
+                                        ],
+                                        "name": "tap"
+                                    },
+                                    "designerId": "72691157-bec5-41cc-844c-eeb157586be6"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "items": null,
+                        "designer|userClassName": "MyPanel",
+                        "designer|displayName": "Content1-1",
+                        "id": "page0",
+                        "itemId": null
+                    },
+                    "configAlternates": {
+                        "items": "array"
+                    },
+                    "designerId": "e8833a13-7c68-4b31-bc3c-e943db228193",
+                    "customConfigs": [
+                        {
+                            "group": "(Custom Properties)",
+                            "name": "items",
+                            "type": "string"
+                        }
+                    ],
+                    "cn": [
+                        {
+                            "type": "titlebar",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTitleBar1",
+                                "docked": "top",
+                                "title": "탭"
+                            },
+                            "designerId": "968bef28-c4b0-4397-89ac-d387cda16dca"
+                        }
+                    ]
+                },
+                {
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "MyPanel2",
+                        "designer|displayName": "Content1-2",
+                        "id": "page1",
+                        "itemId": null
+                    },
+                    "designerId": "5364db4a-18e7-4444-a9aa-9dd236907056",
+                    "cn": [
+                        {
+                            "type": "titlebar",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyTitleBar1",
+                                "docked": "top",
+                                "title": "더블 탭"
+                            },
+                            "designerId": "00afd048-fc6d-4896-9bbd-8dc77b485d88"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

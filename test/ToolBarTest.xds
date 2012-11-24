@@ -1,0 +1,47 @@
+{
+    "name": "ToolBarTest",
+    "settings": {
+        "urlPrefix": "",
+        "spacesToIndent": 4,
+        "exportPath": "",
+        "sdkPath": "",
+        "lineEnding": "CRLF",
+        "genTimestamps": false,
+        "cacheBust": false
+    },
+    "xdsVersion": "2.1.0",
+    "xdsBuild": 670,
+    "schemaVersion": 1,
+    "upgradeVersion": 210000000498,
+    "framework": "touch21",
+    "topInstanceFileMap": {
+        "01f13ebc-6946-423e-96c9-424b2f36313a": {
+            "paths": [
+                "metadata/resource/Library"
+            ],
+            "className": "Library"
+        },
+        "e8d5a6f8-138d-489a-9c99-a6288a1d7d47": {
+            "paths": [
+                "metadata/view/Root",
+                "app/view/override/Root.js",
+                "app/view/Root.js"
+            ],
+            "className": "Root"
+        }
+    },
+    "viewOrderMap": {
+        "view": [
+            "e8d5a6f8-138d-489a-9c99-a6288a1d7d47"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "01f13ebc-6946-423e-96c9-424b2f36313a"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}
